@@ -18,7 +18,7 @@ CTEMPLATE_PKGS="libctemplate-dev"
 LIBPROTOBUF="libprotobuf-c0-dev"
 OS_ID=$(lsb_release -i -s)
 OS_RELEASE=`lsb_release -r -s | awk '{split( $0, a, "."); print a[ 1]}'`
-if [ $OS_ID == "Ubuntu" -a $OS_RELEASE -gt 14 ]
+if [ $OS_ID == "Ubuntu" -a $OS_RELEASE -gt 14 ] || [ $OS_ID == "Debian" ]
 then
 	LIBPROTOBUF="libprotobuf-c-dev"
 fi
